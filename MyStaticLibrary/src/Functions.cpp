@@ -6,7 +6,6 @@ namespace telek {
 
 	void print_hi() {
 		std::cout << "hello world from telek static library" << std::endl;
-		std::cout << "hello world from telek static library" << std::endl;
 	}
 
 }
