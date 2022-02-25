@@ -51,7 +51,7 @@ Not all libraries will let you add them both statically and dynamically but the 
 
 Example: `$(SolutionDir)MyStaticLibrary\src;` <br>
 
-5- Right click on your main project's name > add > reference > add your static library <br><br>
+7- Right click on your main project's name > add > reference > add your static library <br><br>
 
 
 # Adding other static libraries
@@ -68,12 +68,10 @@ Example: `$(SolutionDir)MyStaticLibrary\src;` <br>
 
 # Adding dynamic libraries
 
+Mostly same as adding a static library, the only things you'll need to do different are these: <br>
 
-dynamic:
-glfw3.lib  =>  glfwdll.lib
-put the dll into your .exe's root path
-
-
+1- Instead of adding `glfw3.lib` you'll add `glfwdll.lib` in `Linked > Input` for your main project. (This tells your application the pointers) <br>
+2- After building your .exe file in that file's root directory you'll need to put your .dll files. So for this example we'll need to copy paste `glfw3.dll` into `$(SolutionDir)bin\x64\Debug` since our .exe is in there. (I did a x64 Debug build) <br><br>
 
 
 
