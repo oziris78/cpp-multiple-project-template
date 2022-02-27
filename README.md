@@ -74,6 +74,14 @@ Mostly same as adding a static library, the only things you'll need to do differ
 2- After building your .exe file in that file's root directory you'll need to put your .dll files. So for this example we'll need to copy paste `glfw3.dll` into `$(SolutionDir)bin\x64\Debug` since our .exe is in there. (I did a x64 Debug build) <br><br>
 
 
+# Adding static libraries using source code
+
+1- Pick a library and get it's source code (header files and cpp files), for this example I will use ImGUI.
+2- Create a `vendor` folder in your `src` folder and create an `imgui` folder inside vendor folder. (Create `src/vendor/imgui`)
+3- Put your cpp files inside that imgui folder
+4- Create a folder called `imgui` inside `dependencies` and then put your header files in there within a folder called `include`
+5- In your main project go to properties, in `C/C++ > General` add `$(SolutionDir)dependencies\imgui\include;` to `Additional Library Directories`. <br>
+6- In your main project go to properties, in `Linker > Input` add `opengl32.lib;` to `Additional Dependencies`. (This step is needed because of Imgui, you might not need this one depending on the library you're using) <br><br>
 
 
 # Final Results
@@ -92,7 +100,7 @@ C/C++ > General
 
 | Option  | Will Be Changed To  |
 | ------------- | ------------- |
-| Additional Include Directories  | `$(SolutionDir)MyStaticLibrary\src; $(SolutionDir)dependencies\GLFW\include;`  |
+| Additional Include Directories  | `$(SolutionDir)MyStaticLibrary\src;$(SolutionDir)dependencies\GLFW\include;$(SolutionDir)dependencies\imgui\include;`  |
 
 Linker > General
 
@@ -104,7 +112,7 @@ Linker > Input
 
 | Option  | Will Be Added To The Beginning  |
 | ------------- | ------------- |
-| Additional Dependencies  | `glfw3.lib;`  |
+| Additional Dependencies  | `glfw3.lib;opengl32.lib;`  |
 
 <br><br>
 ⭕ For MyStaticLibrary:
