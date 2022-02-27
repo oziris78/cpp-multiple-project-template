@@ -1,1 +1,10 @@
-﻿  MainProject.vcxproj -> C:\Users\oguzh\Desktop\YivlemeVb\CPP\Yaptiklarim\CppMultipleProjectTemplate\bin\x64\Debug\MainProject.exe
+﻿  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_glfw.cpp
+  imgui_impl_opengl3.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  MainProject.vcxproj -> C:\Users\oguzh\Desktop\YivlemeVb\CPP\Small Projects\__cpp_multiple_project_template\bin\x64\Debug\MainProject.exe
