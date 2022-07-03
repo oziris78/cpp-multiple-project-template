@@ -1,6 +1,6 @@
 #pragma once
 
 
-namespace telek {
+namespace twistral {
 	void print_hi();
 }

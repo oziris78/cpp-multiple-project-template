@@ -178,7 +178,7 @@ int main(void) {
     InitWindow(600, 600, "Asciify This & That");
     SetTargetFPS(60);
 
-    telek::asciifier asciifier = telek::asciifier();
+    twistral::asciifier asciifier = twistral::asciifier();
 
     while (!WindowShouldClose()) {
         BeginDrawing();

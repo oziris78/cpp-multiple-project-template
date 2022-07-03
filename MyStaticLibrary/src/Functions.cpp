@@ -2,10 +2,10 @@
 #include <iostream>
 
 
-namespace telek {
+namespace twistral {
 
 	void print_hi() {
-		std::cout << "hello world from telek static library" << std::endl;
+		std::cout << "hello world from twistral static library" << std::endl;
 	}
 
 }

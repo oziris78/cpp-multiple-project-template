@@ -10,7 +10,7 @@
 /*
 int main() {
 	// MY OWN STATIC LIBRARY
-	telek::print_hi();
+	twistral::print_hi();
 
 	// ADDING GLFW AS A STATIC LIBRARY
 	int a = glfwInit();
